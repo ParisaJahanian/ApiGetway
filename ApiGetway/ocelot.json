@@ -67,21 +67,90 @@
       "SwaggerKey": "ticketing"
     },
     {
-      "DownstreamPathTemplate": "/USR/api/v1/{everything}",
+      "DownstreamPathTemplate": "/USR/api/v1/UserManagement/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "192.168.30.115",
           "Port": 7004
         }
       ],
-      "UpstreamPathTemplate": "/USR/api/v1/{everything}",
+      "UpstreamPathTemplate": "/USR/api/v1/UserManagement/{everything}",
       "UpstreamHttpMethod": [
         "POST",
         "GET"
       ],
 
       "SwaggerKey": "userManagement"
+    },
+    {
+      "DownstreamPathTemplate": "/USR/api/v1/DBLog/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7003
+        }
+      ],
+      "UpstreamPathTemplate": "/USR/api/v1/DBLog/{everything}",
+      "UpstreamHttpMethod": [
+        "POST",
+        "GET"
+      ],
+
+      "SwaggerKey": "serviceLog"
+    },
+    {
+      "DownstreamPathTemplate": "/Bimeh/v1/SportInsurance/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7009
+        }
+      ],
+      "UpstreamPathTemplate": "/Bimeh/v1/SportInsurance/{everything}",
+      "UpstreamHttpMethod": [
+        "POST",
+        "GET"
+      ],
+
+      "SwaggerKey": "sportsInsurance"
+    },
+
+    {
+      "DownstreamPathTemplate": "/IS/api/v1/Shahkar/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7002
+        }
+      ],
+      "UpstreamPathTemplate": "/IS/api/v1/Shahkar/{everything}",
+      "UpstreamHttpMethod": [
+        "POST",
+        "GET"
+      ],
+
+      "SwaggerKey": "infrastructure"
+    },
+    {
+      "DownstreamPathTemplate": "/IS/api/v1/SMS/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7002
+        }
+      ],
+      "UpstreamPathTemplate": "/IS/api/v1/SMS/{everything}",
+      "UpstreamHttpMethod": [
+        "POST",
+        "GET"
+      ],
+
+      "SwaggerKey": "infrastructure"
     }
 
 
@@ -126,7 +195,36 @@
           "Url": "http://localhost:7006/swagger/v1/swagger.json"
         }
       ]
-    }   
-
+    },
+    {
+      "Key": "serviceLog",
+      "Config": [
+        {
+          "Name": "ServiceLog API",
+          "Version": "v1",
+          "Url": "http://localhost:7003/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "sportsInsurance",
+      "Config": [
+        {
+          "Name": "sportsInsurance API",
+          "Version": "v1",
+          "Url": "http://localhost:7009/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "infrastructure",
+      "Config": [
+        {
+          "Name": "infrastructure API",
+          "Version": "v1",
+          "Url": "http://localhost:7002/swagger/v1/swagger.json"
+        }
+      ]
+    }
   ]
 }
