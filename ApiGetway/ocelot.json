@@ -167,6 +167,23 @@
       ],
 
       "SwaggerKey": "infrastructure"
+    },
+    {
+      "DownstreamPathTemplate": "/Bill/v1/CarElectronicTolls/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7012
+        }
+      ],
+      "UpstreamPathTemplate": "/Bill/v1/CarElectronicTolls/{everything}",
+      "UpstreamHttpMethod": [
+        "POST",
+        "GET"
+      ],
+
+      "SwaggerKey": "carTolls"
     }
 
 
@@ -239,6 +256,16 @@
           "Name": "infrastructure API",
           "Version": "v1",
           "Url": "http://localhost:7002/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "carTolls",
+      "Config": [
+        {
+          "Name": "carTolls API",
+          "Version": "v1",
+          "Url": "http://localhost:7012/swagger/v1/swagger.json"
         }
       ]
     }
