@@ -184,7 +184,25 @@
       ],
 
       "SwaggerKey": "carTolls"
-    }
+    },
+    {
+      "DownstreamPathTemplate": "/Faraboom/v1/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7014
+        }
+      ],
+      "UpstreamPathTemplate": "/Faraboom/v1/{everything}",
+      "UpstreamHttpMethod": [
+        "POST",
+        "GET"
+      ],
+
+      "SwaggerKey": "payTransfer"
+    },
+
 
 
   ],
@@ -266,6 +284,16 @@
           "Name": "carTolls API",
           "Version": "v1",
           "Url": "http://localhost:7012/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "payTransfer",
+      "Config": [
+        {
+          "Name": "payTransfer API",
+          "Version": "v1",
+          "Url": "http://localhost:7014/swagger/v1/swagger.json"
         }
       ]
     }
